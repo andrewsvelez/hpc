@@ -1,8 +1,9 @@
 #include "stdio.h"
 #include "stdlib.h"
+#include "time.h"
 
-#define filas 2
-#define cols 2
+#define filas 6
+#define cols 6
 
 void iniMatriz(int *m){
 	
@@ -52,6 +53,9 @@ void mult(int *m1, int *m2, int *m3){
 }
 
 int main(){
+	clock_t start_t, end_t;
+	double total_t;
+	//m1
 	int *m1;
 	m1= (int *)malloc(filas*cols*sizeof(int));
 	
@@ -68,9 +72,18 @@ int main(){
 	iniMatriz(m1);
 	iniMatriz(m2);
 	
+	//clock
+	start_t = clock();
 	
 	//multiplicacion
 	mult(m1,m2,m3);
+	
+	//mostrar
+	end_t= clock();
+	
+	total_t= ((double)(end_t - start_t)) / CLOCKS_PER_SEC;
+	
+	printf("tiempo= %f\n", total_t);
 	
 	//mostrar
 	//mostrarMatriz(m2);
