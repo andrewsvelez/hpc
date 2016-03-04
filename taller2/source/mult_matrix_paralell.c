@@ -4,8 +4,8 @@
 
 #include "cuda.h"
 
-#define filas 2
-#define cols 2
+#define filas 3
+#define cols 3
 
 void iniMatriz(int *m){
 	
@@ -14,7 +14,7 @@ void iniMatriz(int *m){
 	{
 		for (j = 0; j < cols; j++)
 		{
-			m[i*cols+j] = (i*10)+j;
+			m[i*cols+j] = 1;
 		}
 		
 	}
@@ -36,21 +36,20 @@ void mostrarMatriz(int *m){
 }
 
 //kernel
-__global__ void mult_m (int *d_m1, int *d_m2, int *d_m3){
-	int i = (blockIdx.x * blockDim.x) + threadIdx.x;
-	int j = (blockIdx.y * blockDim.y) + threadIdx.y;
-	int k,aux;
-	aux=0;
-	if((i< filas) && (j<cols)){
-		aux=0;
-		for (k = 0; k <cols*filas ; k++)
-		{
-			aux += d_m1[i*cols+j] * d_m2[j*cols+k];
-		}
-		d_m3[i*cols+k] = aux;
-		
-	}
+__global__ void mult_m(int *d_m1, int *d_m2, int *d_m3){
 	
+  int i,j,aux;
+
+  j = blockIdx.y*blockDim.y+threadIdx.y;
+  i = blockIdx.x*blockDim.x+threadIdx.x;
+	
+	if(i<cols && j<filas){
+    	aux=0;
+	   for(int k=0;k<cols;k++){
+		 aux+= d_m1[j*cols+k] * d_m2[k*cols+i];
+		}
+		d_m3[i*cols+j]=aux;
+	}
 }
 
 int main(){
