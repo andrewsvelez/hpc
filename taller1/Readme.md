@@ -81,4 +81,4 @@ Promedio|***Ts* (secuencial)**|***Tp* (paralelo)**|***X= Ts/Tp***
 
 ####Gráfica!
 
-[Aceleración](https://drive.google.com/file/d/0B3_plw75tgIpci1YRy1sakNOSzg/view?usp=sharing)
+![alt tag](media/img/aceleracion_1024.png)
