@@ -1,1 +1,2 @@
-#Taller 2 - Multiplicación de matrices
+#Multiplicación de matrices
+####Parcial 1 - HPC
