@@ -50,4 +50,4 @@ A continuación se muestran las tablas con los datos obtenidos en las pruebas co
 
 #####Gráfica de aceleración
 
-![alt tag](media/img/secuencial_vs_tiling.png)
+![alt tag](media/img/secuencial_vs_tiling_2.png)
