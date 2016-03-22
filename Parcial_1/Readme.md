@@ -28,3 +28,26 @@ A continuación se muestran las tablas con los datos obtenidos en las pruebas co
 #####Gráfica de aceleración
 
 ![alt tag](media/img/secuencial_vs_ingenua.PNG)
+
+#####Tabla algoritmo secuencial versus paralelo tiling (memoria compartida)
+*En la siguiente tabla se encuentran registrados los tiempos promedio de ambos algoritmos para cada tamaño de matriz cuadrada*
+
+**Tamaño matrix**|	**Ts**|	**Tt**|	**x=Ts / Tt**
+----------|-----------|-------|-------|--------------
+32	|0.0001602222222	|0.00004055555556	|3.950684932
+64	|0.001513222222	|0.00004944444444	|30.60449438
+96	|0.007032333333	|0.00006455555556	|108.9345955
+128	|0.01049666667	|0.000089	|117.9400749
+192	|0.03342966667	|0.000158	|211.5801688
+224	|0.04811111111	|0.0002333333333	|206.1904762
+256	|0.07272555556	|0.0002992222222	|243.0486446
+512	|0.6346971111	|0.001656888889	|383.0655848
+1024	|5.132635333|	0.009582	|535.6538649
+1536	|24.22341856|	0.03463488889	|699.3935691
+
+*Ver tablas completas con el conjunto de datos con los cuales se obtuvieron los anteriores promedios*
+[Ver tablas](https://docs.google.com/spreadsheets/d/1o_RRmzr3Mnd59_kJS9YmxhFSW7GESxPt83-B3bmIxpw/edit?usp=sharing)
+
+#####Gráfica de aceleración
+
+![alt tag](media/img/secuencial_vs_tiling.png)
