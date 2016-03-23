@@ -64,6 +64,9 @@ En la siguiente gráfica se muestra la relación de acelaración entre los algor
 
 ![alt tag](media/img/ingenua_tiling.png)
 
+**Línea roja:**aceleración algoritmo paralelo con tiling.
+**Línea azul:**aceleración algoritmo paralelo ingenuo.
+
 *Ver tablas completas con el conjunto de datos con los cuales se obtuvieron los anteriores promedios (ir a la tercer pestaña)*
 [Ver tablas](https://docs.google.com/spreadsheets/d/1o_RRmzr3Mnd59_kJS9YmxhFSW7GESxPt83-B3bmIxpw/edit?usp=sharing)
 
